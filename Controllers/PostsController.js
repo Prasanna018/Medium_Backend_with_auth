@@ -1,6 +1,4 @@
-
 import postDb from "../Models/Posts-model.js"
-
 
 
 export const sendPost = async (req, res) => {
@@ -18,7 +16,7 @@ export const sendPost = async (req, res) => {
     await postData.save();
 
     res.status(200).json({
-        postData
+        message: "post uploaded"
 
     })
 }
@@ -109,10 +107,3 @@ export const deletePost = async (req, res) => {
     }
 
 }
-
-// export const getProfileData = (req, res) => {
-//     const id = req.user._id;
-//     console.log(id);
-
-
-// }

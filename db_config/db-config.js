@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
-mongoose.connect("mongodb+srv://prasannagaikwad0018:2doX0XmcSRolWdrI@cluster0.zemrf.mongodb.net/Medium")
+import dotenv from 'dotenv'
+dotenv.config()
+mongoose.connect(process.env.MONGO_URL)
 
 
 const db = mongoose.connection;
